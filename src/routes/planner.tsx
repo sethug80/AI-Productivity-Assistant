@@ -37,7 +37,7 @@ function PlannerPage() {
         { name: "style", label: "Plan style", type: "select", options: ["Sprint plan", "Daily schedule", "Weekly roadmap", "Checklist"] },
       ]}
       buildPrompt={(v) =>
-        `Create a ${v.style} for this goal.\nGoal: ${v.goal}\nDeadline: ${v.deadline || "not specified"}\nCapacity: ${v.capacity || "not specified"}\nConstraints: ${v.constraints || "none given"}`
+        `Create a ${v["style"]} for this goal.\nGoal: ${v["goal"]}\nDeadline: ${v["deadline"] || "not specified"}\nCapacity: ${v["capacity"] || "not specified"}\nConstraints: ${v["constraints"] || "none given"}`
       }
       ctaLabel="Build my plan"
     />

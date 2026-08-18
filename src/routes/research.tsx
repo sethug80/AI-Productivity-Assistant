@@ -36,7 +36,7 @@ function ResearchPage() {
         { name: "audience", label: "Audience", type: "select", options: ["Executive", "Team lead", "Technical", "Client-facing"] },
       ]}
       buildPrompt={(v) =>
-        `Research question: ${v.topic}\nContext: ${v.context || "none given"}\nDepth: ${v.depth}\nAudience: ${v.audience}`
+        `Research question: ${v["topic"]}\nContext: ${v["context"] || "none given"}\nDepth: ${v["depth"]}\nAudience: ${v["audience"]}`
       }
       ctaLabel="Run research"
     />

@@ -36,7 +36,7 @@ function MeetingsPage() {
         { name: "focus", label: "Summary focus", type: "select", options: ["Balanced recap", "Action items only", "Executive summary", "Decisions & risks"] },
       ]}
       buildPrompt={(v) =>
-        `Summarize the following meeting.\nTitle: ${v.title || "untitled"}\nAttendees: ${v.attendees || "not listed"}\nFocus: ${v.focus}\n\nNotes:\n${v.notes}`
+        `Summarize the following meeting.\nTitle: ${v["title"] || "untitled"}\nAttendees: ${v["attendees"] || "not listed"}\nFocus: ${v["focus"]}\n\nNotes:\n${v["notes"]}`
       }
       ctaLabel="Summarize notes"
     />

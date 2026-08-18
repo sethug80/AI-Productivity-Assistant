@@ -37,7 +37,7 @@ function EmailPage() {
         { name: "cta", label: "Desired next step", placeholder: "Approve by Friday 17:00" },
       ]}
       buildPrompt={(v) =>
-        `Write a workplace email.\nRecipient: ${v.recipient}\nTone: ${v.tone}\nLength: ${v.length}\nDesired next step: ${v.cta || "not specified"}\nKey points:\n${v.purpose}`
+        `Write a workplace email.\nRecipient: ${v["recipient"]}\nTone: ${v["tone"]}\nLength: ${v["length"]}\nDesired next step: ${v["cta"] || "not specified"}\nKey points:\n${v["purpose"]}`
       }
       ctaLabel="Generate email"
     />
